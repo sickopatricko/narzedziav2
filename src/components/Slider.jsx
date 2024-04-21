@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Slide from "./Slide";
+import NavBar from "./NavBar";
 
 const Slider = () => {
     const slides = [
@@ -87,7 +88,7 @@ const Slider = () => {
     };
 
     return (
-        <div className="relative h-dvh w-full">
+        <div className=" relative h-dvh w-full">
             {/* below add no-scrollbar class */}
             <div
                 className="no-scrollbar flex h-full w-full snap-x snap-mandatory flex-row flex-nowrap items-center justify-start overflow-x-scroll scroll-smooth"
@@ -105,7 +106,7 @@ const Slider = () => {
                         />
                     ))}
             </div>
-            <div className="navigation absolute bottom-4 left-[50%] flex -translate-x-[50%] flex-row items-center justify-center gap-4 text-white">
+            <div className="animate-fade navigation absolute bottom-4 left-[50%] flex -translate-x-[50%] flex-row items-center justify-center gap-4 text-white">
                 {slides.map((e) => (
                     <label key={e.id} className={`nav cursor-pointer`}>
                         <input
